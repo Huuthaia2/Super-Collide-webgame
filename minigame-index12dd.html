@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  
+<!-- Mirrored from super-collide.apps.minigame.vip/minigame-index.html?mn_config=https://indigo.minigame.vip/v1/api/channel/indigo/main/game/super-collide/config&ts=1690429918839 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 04:02:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+
+    <!--www.html5rocks.com/en/mobile/mobifying/-->
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+    <!--developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait">
+
+    <!--fix fireball/issues/3568 -->
+    <!--<meta name="browsermode" content="application">-->
+    <meta name="x5-page-mode" content="app">
+
+    <!--<link rel="apple-touch-icon" href=".png" />-->
+    <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- 引入 base64的分享图，不同游戏自行修改 -->
+    <script type="text/javascript" src="coinsdk/share.js"></script>
+
+    <script type="text/javascript" src="name.js"></script>
+
+    <!-- 引入 fb sdk的封装-->
+    <script type="text/javascript" src="coinsdk/CoinApp1.0.2.js"></script>
+
+    <!-- Polyfills bundle. -->
+    <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
+
+    <!-- SystemJS support. -->
+    <script src="src/system.bundle.js" charset="utf-8"> </script>
+
+    <!-- Import map -->
+    <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+
+  </head>
+
+  <body>
+    <script src="../sdk.minigame.vip/js/1.1/minigamef9f9.js?t=1686042298"></script>
+    <script src="jquery-2.0.0.min.js"></script>
+    <script src="ads-sdk-noframe.js"></script>
+    <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+    <script type="text/javascript">
+      //加载js的方法
+      function loadLib(url) {
+        var script = document.createElement("script");
+        script.async = false;
+        script.src = url;
+        document.head.appendChild(script);
+      }
+      window.onload = function () {
+        if (!window.isInitializeAsync) {
+          window.isInitializeAsync = true;
+          CoinApp.startShowLoading();
+
+          //运行游戏代码
+          CoinApp.getItem("strongestV3").then((e) => {
+            window.strongestV3Data = e;
+            System.import('index.5587c.js').catch(function (err) { console.error(err); })
+          });
+
+        }
+      };
+    </script>
+
+
+    <!-- <script>
+    System.import('./index.5587c.js').catch(function(err) { console.error(err); })
+</script> -->
+
+    <!-- 加载模块 开始 H5原生菊花，如果游戏没有现成的菊花，可以用这块代码 ，需要对应的样式  -->
+    <div id="gifloading" style="display:none;  position: absolute; top: 0; right: 0;  bottom: 0; left: 0;background:#000000;opacity:0.7">
+      <div style="margin: auto; width: 128px; height: 128px;top: 300px;position: relative;">
+        <img class="tp" src="coinsdk/img-loading.png" width="128" height="128" />
+      </div>
+
+    </div>
+    <!-- 加载模块 结束  -->
+
+    <!-- 飘字模块 开始，如果游戏没有现成的飘字，可以用这块代码  -->
+    <div id="fly_text" style="background:#000000;opacity:0.5; display:none;position: fixed;top:400px;font-size: 20px;color: #fff;padding:10px 20px;border-radius:5px">我是飘字</div>
+    <!-- 飘字模块 结束 -->
+
+  </body>
+
+
+<!-- Mirrored from super-collide.apps.minigame.vip/minigame-index.html?mn_config=https://indigo.minigame.vip/v1/api/channel/indigo/main/game/super-collide/config&ts=1690429918839 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 04:02:26 GMT -->
+</html>
+
+<style>
+  @-webkit-keyframes rotation {
+
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+
+  }
+
+  .tp {
+
+    -webkit-transform: rotate(360deg);
+
+    animation: rotation 1.5s linear infinite;
+
+    -moz-animation: rotation 1.5s linear infinite;
+
+    -webkit-animation: rotation 1.5s linear infinite;
+
+    -o-animation: rotation 1.5s linear infinite;
+
+  }
+</style>

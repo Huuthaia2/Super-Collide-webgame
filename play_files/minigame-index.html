@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0167)https://super-collide.apps.minigame.vip/minigame-index.html?mn_config=https://indigo.minigame.vip/v1/api/channel/indigo/main/game/super-collide/config&ts=1690429645471 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title></title>
+
+    <!--www.html5rocks.com/en/mobile/mobifying/-->
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1">
+
+    <!--developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+
+    <!--fix fireball/issues/3568 -->
+    <!--<meta name="browsermode" content="application">-->
+    <meta name="x5-page-mode" content="app">
+
+    <!--<link rel="apple-touch-icon" href=".png" />-->
+    <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- 引入 base64的分享图，不同游戏自行修改 -->
+    <script type="text/javascript" async="" src="./analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./js(1)"></script><script type="text/javascript" async="" src="./js(2)"></script><script type="text/javascript" async="" src="./analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./js(3)"></script><script type="text/javascript" src="./share.js.tải xuống"></script>
+
+    <script type="text/javascript" src="./name.js.tải xuống"></script>
+
+    <!-- 引入 fb sdk的封装-->
+    <script type="text/javascript" src="./CoinApp1.0.2.js.tải xuống"></script>
+
+    <!-- Polyfills bundle. -->
+    <script src="./polyfills.bundle.js.tải xuống" charset="utf-8"> </script>
+
+    <!-- SystemJS support. -->
+    <script src="./system.bundle.js.tải xuống" charset="utf-8"> </script>
+
+    <!-- Import map -->
+    <script src="./import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+
+  <script async="" src="./js(4)" type="text/javascript"></script><script src="./minigame-sdk.js.tải xuống"></script><script src="./js(5)" async=""></script></head>
+
+  <body style="">
+    <script src="./minigame.js.tải xuống"></script>
+    <script src="./jquery-2.0.0.min.js.tải xuống"></script>
+    <script src="./ads-sdk-noframe.js.tải xuống"></script>
+    <div id="Cocos3dGameContainer" style="transform: rotate(0deg); width: 470px; height: 899px; margin: 0px; padding: 0px;"><canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99" width="470" height="899" class="gameCanvas" style="width: 470px; height: 899px;"></canvas></div>
+    <script type="text/javascript">
+      //加载js的方法
+      function loadLib(url) {
+        var script = document.createElement("script");
+        script.async = false;
+        script.src = url;
+        document.head.appendChild(script);
+      }
+      window.onload = function () {
+        if (!window.isInitializeAsync) {
+          window.isInitializeAsync = true;
+          CoinApp.startShowLoading();
+
+          //运行游戏代码
+          CoinApp.getItem("strongestV3").then((e) => {
+            window.strongestV3Data = e;
+            System.import('./index.5587c.js').catch(function (err) { console.error(err); })
+          });
+
+        }
+      };
+    </script>
+
+
+    <!-- <script>
+    System.import('./index.5587c.js').catch(function(err) { console.error(err); })
+</script> -->
+
+    <!-- 加载模块 开始 H5原生菊花，如果游戏没有现成的菊花，可以用这块代码 ，需要对应的样式  -->
+    <div id="gifloading" style="display:none;  position: absolute; top: 0; right: 0;  bottom: 0; left: 0;background:#000000;opacity:0.7">
+      <div style="margin: auto; width: 128px; height: 128px;top: 300px;position: relative;">
+        <img class="tp" src="./img-loading.png" width="128" height="128">
+      </div>
+
+    </div>
+    <!-- 加载模块 结束  -->
+
+    <!-- 飘字模块 开始，如果游戏没有现成的飘字，可以用这块代码  -->
+    <div id="fly_text" style="background:#000000;opacity:0.5; display:none;position: fixed;top:400px;font-size: 20px;color: #fff;padding:10px 20px;border-radius:5px">我是飘字</div>
+    <!-- 飘字模块 结束 -->
+
+  
+
+
+
+<style>
+  @-webkit-keyframes rotation {
+
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+
+  }
+
+  .tp {
+
+    -webkit-transform: rotate(360deg);
+
+    animation: rotation 1.5s linear infinite;
+
+    -moz-animation: rotation 1.5s linear infinite;
+
+    -webkit-animation: rotation 1.5s linear infinite;
+
+    -o-animation: rotation 1.5s linear infinite;
+
+  }
+</style><div id="continue" class="continue" onclick="onClickContinue()" style="display: none;"><h2 class="continue_text">Click to Continue ...</h2></div><style type="text/css">@font-face { font-family:"FZY4JW-subfont_LABEL"; src:url("assets/resources/native/63/63e7e33a-b069-48ae-9e8f-e777ed8aa4bd.579ee/FZY4JW-subfont.ttf");}</style><div style="font-family: FZY4JW-subfont_LABEL; position: absolute; left: -100px; top: -100px;">.</div><style type="text/css">@font-face { font-family:"num_HFVoyager-subfont_LABEL"; src:url("assets/resources/native/87/8741b6b5-d829-464d-80bf-2150af0efb57.e9bb5/num_HFVoyager-subfont.ttf");}</style><div style="font-family: num_HFVoyager-subfont_LABEL; position: absolute; left: -100px; top: -100px;">.</div></body></html>
